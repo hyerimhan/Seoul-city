@@ -2,11 +2,11 @@
 const newsTab = document.querySelector('.slide__news h3');
 const citizenTab = document.querySelector('.slide__citizen h3');
 const newsPauseBtn = document.querySelector('.slide__news .swiper-pause');
-const newsPauseBtnIcon = document.querySelector('.slide__news .swiper-pause .play-btn');
+const newsPauseBtnIcon = newsPauseBtn.querySelectorAll('button');
 const citizenPauseBtn = document.querySelector('.slide__citizen .swiper-pause');
-const citizenPauseBtnIcon = document.querySelector('.slide__citizen .swiper-pause .play-btn');
+const citizenPauseBtnIcon = citizenPauseBtn.querySelectorAll('button');
 const adPauseBtn = document.querySelector('.ad-swiper .swiper-pause');
-const adPauseBtnIcon = document.querySelector('.ad-swiper .swiper-pause .play-btn');
+const adPauseBtnIcon = adPauseBtn.querySelectorAll('button');
 
 citizenTab.addEventListener('click', function() {
   if(newsTab.parentNode.classList.contains('on')) {
@@ -89,11 +89,13 @@ newsPauseBtn.addEventListener('click', function() {
   if (autoPlaystate === 'false') {
     newsPauseBtn.setAttribute('aria-pressed', 'true');
     slideNews.autoplay.stop();
-    newsPauseBtnIcon.style.background = 'url("../images/icon_set_common_2019.png") no-repeat -269px -285px';
+    newsPauseBtnIcon[0].style.display = "none";
+    newsPauseBtnIcon[1].style.display = "block";
   } else {
     newsPauseBtn.setAttribute('aria-pressed', 'false');
     slideNews.autoplay.start();
-    newsPauseBtnIcon.style.background = 'url("../images/icon_set_common_2019.png") no-repeat -285px -285px';
+    newsPauseBtnIcon[0].style.display = "block";
+    newsPauseBtnIcon[1].style.display = "none";
   }
 })
 
@@ -102,11 +104,13 @@ citizenPauseBtn.addEventListener('click', function() {
   if (autoPlaystate === 'false') {
     citizenPauseBtn.setAttribute('aria-pressed', 'true');
     slideCitizen.autoplay.stop();
-    citizenPauseBtnIcon.style.background = 'url("../images/icon_set_common_2019.png") no-repeat -269px -285px';
+    citizenPauseBtnIcon[0].style.display = "none";
+    citizenPauseBtnIcon[1].style.display = "block";
   } else {
     citizenPauseBtn.setAttribute('aria-pressed', 'false');
     slideCitizen.autoplay.start();
-    citizenPauseBtnIcon.style.background = 'url("../images/icon_set_common_2019.png") no-repeat -285px -285px';
+    citizenPauseBtnIcon[0].style.display = "block";
+    citizenPauseBtnIcon[1].style.display = "none";
   }
 })
 
@@ -115,11 +119,13 @@ adPauseBtn.addEventListener('click', function() {
   if (autoPlaystate === 'false') {
     adPauseBtn.setAttribute('aria-pressed', 'true');
     slideAd.autoplay.stop();
-    adPauseBtnIcon.style.background = 'url("../images/icon_set_common.png") no-repeat -101px -43px';
+    adPauseBtnIcon[0].style.display = "none";
+    adPauseBtnIcon[1].style.display = "block";
   } else {
     adPauseBtn.setAttribute('aria-pressed', 'false');
     slideAd.autoplay.start();
-    adPauseBtnIcon.style.background = 'url("../images/icon_set_common.png") no-repeat -65px -43px';
+    adPauseBtnIcon[0].style.display = "block";
+    adPauseBtnIcon[1].style.display = "none";
   }
   console.log('hi')
 })

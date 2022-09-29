@@ -372,11 +372,23 @@ header ul.my-info {
   width: 18px;
   height: 18px;
 }
+.main .visual-area .slide>div .swiper-pause button {
+  position: absolute;
+  display: block;
+}
 .main .visual-area .slide>div .swiper-pause .play-btn {
   width: 100%;
   height: 100%;
-  background: url("../images/icon_set_common_2019.png") no-repeat -285px -285px;
+  background: url("../images/icon_set_common_2019.png") no-repeat -269px -285px;
+  display: none;
 }
+.main .visual-area .slide>div .swiper-pause .pause-btn {
+  width: 100%;
+  height: 100%;
+  background: url("../images/icon_set_common_2019.png") no-repeat -285px -285px;
+  display: block;
+}
+
 .main .visual-area .panel {
   width: 360px;
   position: relative;
@@ -845,11 +857,20 @@ header ul.my-info {
   cursor: pointer;
   width: 18px;
   height: 18px;
+  position: relative;
+}
+.ad-swiper .swiper-pause button {
+  position: absolute;
+}
+.ad-swiper .swiper-pause .pause-btn {
+  width: 100%;
+  height: 100%;
+  background: url("../images/icon_set_common.png") no-repeat -65px -43px;
 }
 .ad-swiper .swiper-pause .play-btn {
   width: 100%;
   height: 100%;
-  background: url("../images/icon_set_common.png") no-repeat -65px -43px;
+  background: url("../images/icon_set_common.png") no-repeat -101px -43px;
 }
 
 .site-area {
