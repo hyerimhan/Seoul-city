@@ -875,65 +875,186 @@ header ul.my-info {
   display: none;
 }
 
+/* site-area */
 .site-area {
-  border: 1px solid #d0d0d0;
   margin-bottom: 30px;
-  margin-bottom: 500px;
 }
+
 .site-area .wrap {
-  display: flex;
   position: relative;
 }
-.site-area .wrap>div {
-  width: 20%;
-  border-right: 1px solid #d0d0d0;
-  box-sizing: border-box;
+.site-area .wrap > ul {
+  border: 1px solid #d0d0d0;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
 }
-.site-area .wrap>div:last-child {
-  border-right: 0;
+.site-area .wrap > ul > li {
+  width: 20%;
 }
-.site-area .wrap>div button {
-  width: 100%;
-  height: 100%;
-  padding: 20px 0;
-  font-size: 14px;
-  cursor: pointer;
+.site-area .wrap > ul > li > button {
   background-color: #f7f7f7;
+  width: 100%;
+  font-size: 16px;
+  border-right: 1px solid #d0d0d0;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 60px;
+  font-size: 14px;
+  color: #222;
 }
-.site-area .wrap>div button span {
-  font-size: 30px;
+.site-area .wrap > ul > li:last-child > button {
+  border-right: 0;
+} 
+.site-area .wrap > ul > li > button.on {
+  background-color: #e2e2e2;
+}
+.site-area .wrap > ul > li > button > span {
   transition: 0.3s;
+  font-size: 30px;
 }
-.site-area .wrap>div.on button span {
+.site-area .wrap > ul > li > button.on > span {
   transform: rotate(180deg);
 }
-.site-area .wrap>div .hidden {
-  display: none;
-}
-.site-area .wrap>div.on .hidden {
-  display: block;
-}
-.site-area .wrap>div .site-list {
+.site-area .wrap > ul > li .site-list {
   position: absolute;
-  width: calc(100% + 2px);
-  background: #fff;
-  left: -1px;
-  bottom: calc(100% + 1px);
+  width: 100%;
+  left: 0;
+  bottom: 62px;
+  padding: 5px 20px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
   border: 1px solid #d0d0d0;
   border-bottom: inherit;
+  z-index: 1;
+  display: none;
+}
+.site-area .wrap > ul > li button.on ~ .site-list {
+  z-index: 1;
+}
+.site-area .wrap > ul > li .site-list > ul {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  z-index: 1;
-  padding: 10px 20px 20px;
 }
-.site-area .wrap>div .site-list>li {
+.site-area .wrap > ul > li .site-list ul > li {
   width: 25%;
-  margin-top: 10px;
+  margin-top: 15px;
+}
+.site-area .wrap > ul > li .site-list ul > li a {
+  display: inline-block;
+  font-size: 14px;
+  color: #555;
+  letter-spacing: -1px;
+}
+
+
+/* FOOTER */
+footer {}
+footer .nuri {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+footer .nuri .footer__private {
+  display: flex;
+  gap: 30px;
+}
+footer .nuri .footer__private li {
+  position: relative;
+}
+footer .nuri .footer__private li::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+  right: -15px;
+}
+footer .nuri .footer__private li:last-child:before {
+  display: none;
+}
+footer .nuri .footer__private li a {
+  font-size: 13px;
+  color: #636363;
+  letter-spacing: -1px;
+}
+footer .nuri .footer__private li.policy a {
+  font-weight: bold;
+  color: #000;
+}
+footer .nuri .footer__SNS {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+}
+footer .nuri .footer__SNS > li a {
+  width: 24px;
+  height: 24px;
+}
+footer .nuri .footer__SNS .facebook a {
+  background: url("../images/icon_set_sns.png") no-repeat -25px 0;
+}
+footer .nuri .footer__SNS .twitter a {
+  background: url("../images/icon_set_sns.png") no-repeat -50px 0;
+}
+footer .nuri .footer__SNS .insta a {
+  background: url("../images/icon_set_sns.png") no-repeat -75px 0;
+}
+footer .nuri .footer__SNS .kakao a {
+  background: url("../images/icon_set_sns.png") no-repeat -100px 0;
+}
+footer .nuri .footer__SNS .youtube a {
+  background: url("../images/icon_set_sns.png") no-repeat -125px 0;
+}
+footer .nuri .footer__SNS .blog a {
+  background: url("../images/icon_set_sns.png") no-repeat -150px 0;
+}
+footer .nuri .footer__SNS .facebook:hover a {
+  background: url("../images/icon_set_sns.png") no-repeat -25px -25px;
+}
+footer .nuri .footer__SNS .twitter:hover a {
+  background: url("../images/icon_set_sns.png") no-repeat -50px -25px;
+}
+footer .nuri .footer__SNS .insta:hover a {
+  background: url("../images/icon_set_sns.png") no-repeat -75px -25px;
+}
+footer .nuri .footer__SNS .kakao:hover a {
+  background: url("../images/icon_set_sns.png") no-repeat -100px -25px;
+}
+footer .nuri .footer__SNS .youtube:hover a {
+  background: url("../images/icon_set_sns.png") no-repeat -125px -25px;
+}
+footer .nuri .footer__SNS .blog:hover a {
+  background: url("../images/icon_set_sns.png") no-repeat -150px -25px;
+}
+
+footer .rights {
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+  display: flex;
+  gap: 50px;
+}
+footer .rights .inquire {
+  background: url("../images/icon_set_common.png") no-repeat -180px 0;
+  width: 108px;
+  height: 45px;
+}
+footer .rights .addr {
+  font-size: 13px;
+  color: #636363;
+  letter-spacing: -1px;
+}
+footer .rights .addr p {
+  margin-bottom: 5px;
+}
+footer .rights .addr p:last-child {
+  margin-bottom: 0;
+}
+footer .footer__mark {
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 10px;
 }

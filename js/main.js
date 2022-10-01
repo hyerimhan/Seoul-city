@@ -130,4 +130,25 @@ adPauseBtn.addEventListener('click', function() {
   console.log('hi')
 })
 
-// site-area
+
+// jQuery (javascript로 구현할 것 !)
+// site-area Tab
+$(document).ready(function() {
+  const siteListBtn =  $('.site-area .wrap button');
+  const siteList =  $('.site-list');
+  
+  siteListBtn.on("click", function() {
+
+    if (! $(this).hasClass("on")) {
+      siteListBtn.removeClass("on");
+      siteList.slideUp();
+
+      $(this).siblings(".site-list").slideDown();
+      $(this).addClass("on");
+    } else {
+      $(this).siblings(".site-list").slideUp();
+      $(this).removeClass("on");
+    }
+
+  })
+});
