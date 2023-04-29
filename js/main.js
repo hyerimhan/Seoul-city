@@ -152,3 +152,20 @@ $(document).ready(function() {
 
   })
 });
+
+// const siteListBtn =  document.querySelectorAll('.site-area .wrap button');
+// const siteList =  document.querySelectorAll('.site-list');
+
+// siteListBtn.forEach(el => {
+//   el.addEventListener('click', () => {
+//     for (let i = 0; i < siteListBtn.length; i += 1) {
+//       siteListBtn[i].classList.remove('on');
+//     }
+
+//     if(! el.classList.co ntains('on')) {
+//       el.classList.add('on')
+//     } else {
+//       el.classList.remove('on')
+//     }
+//   })
+// })

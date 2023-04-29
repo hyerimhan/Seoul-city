@@ -901,6 +901,8 @@ header ul.my-info {
   line-height: 60px;
   font-size: 14px;
   color: #222;
+  z-index: 2;
+  position: relative;
 }
 .site-area .wrap > ul > li:last-child > button {
   border-right: 0;
@@ -926,11 +928,14 @@ header ul.my-info {
   border: 1px solid #d0d0d0;
   border-bottom: inherit;
   z-index: 1;
+  overflow: hidden;
   display: none;
 }
+
 .site-area .wrap > ul > li button.on ~ .site-list {
   z-index: 1;
 }
+
 .site-area .wrap > ul > li .site-list > ul {
   display: flex;
   flex-wrap: wrap;
